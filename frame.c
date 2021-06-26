@@ -2,9 +2,6 @@
 #include<string.h> 
 #include<stdlib.h> 
 
-
-
-
 char res[100];
  void sender() 
  { 

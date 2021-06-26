@@ -1,6 +1,7 @@
 #include<stdio.h> 
 #include<stdlib.h> 
 #include<math.h> 
+
 void receiver(int *frame,int l2) { 
 	int i,j,counter=0,l3; 	
 	int msg[100]; 
@@ -29,11 +30,14 @@ void receiver(int *frame,int l2) {
 	for(i=0;i<j;i++) 
 	printf("%d",msg[i]); 
 	printf("\n"); } 
+
+
 void sender() { 
 	int data[100],frame[100],framelen=0,n,i,j=8; 
 	int count=0,zeroadded=0,zero; 
 	printf("Enter the number of bits\n"); 
-	scanf("%d",&n); printf("Enter data for bits\n"); 
+	scanf("%d",&n); 
+	printf("Enter data for bits\n"); 
 	for(i=0;i<n;i++) 
 		scanf("%d",&data[i]); 
 	frame[0]=0; 
@@ -52,7 +56,6 @@ void sender() {
 		zero=1; } 
 		else { 
 			if((count==5)) { 
-			
 				frame[j]=0; 
 				j++; 
 				zeroadded++; 
